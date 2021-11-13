@@ -7,14 +7,18 @@ import {
   } from "react-router-dom";
 import About from './pages/About';
 import Posts from './pages/Posts';
+import Error from './pages/Error';
+import MyNavbar from './components/UI/navbar/MyNavbar';
 
 function App() {
     return(
         <BrowserRouter>
-            <Routes>
-                <Route path="/about" element={<About/>} />
-                <Route path="/posts" element={<Posts/>} />
-            </Routes>
+            <MyNavbar/>
+                <Routes>
+                    <Route path="/about" element={<About/>} />
+                    <Route path="/" element={<Posts/>} />
+                    <Route path="*" element={<Error/>} />
+                </Routes>
         </BrowserRouter>
     )
 }

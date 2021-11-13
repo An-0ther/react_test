@@ -7,6 +7,8 @@ import PostForm from '../components/PostForm';
 import PostFilter from '../components/PostFilter';
 import PostList from '../components/PostList';
 import Mybutton from '../components/UI/button/Mybutton';
+import { Button, ButtonGroup } from '@mui/material';
+import {Helmet} from "react-helmet";
 
 function Posts() {
     const [posts,
@@ -48,22 +50,28 @@ function Posts() {
     
     return (
         <div className="App">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Posts page / Home</title>
+            </Helmet>
             <PostForm create={createPost} />
-            <hr style={{margin: '15px 0'}} />
+
             <PostFilter filter={filter} setFilter={setFilter} />
             {postError &&
                 <h1>Error happened ${postError}</h1>
             }
             {isPostsLoading
                 ? <h1>Loaddiiing</h1>
-                : <PostList remove={removePost} posts={sortedAndSearchedPosts} title="abrakadabra"/>
+                : <PostList remove={removePost} posts={sortedAndSearchedPosts} title="Post List"/>
             }
-            {pagesArray.map(n => 
-                <Mybutton
-                    onClick={() => changePage(n)}
-                    key={n}
-                >{n}</Mybutton>    
-            )}
+            <ButtonGroup variant="text" aria-label="outlined primary button group" sx={{textAlign: 'center', justifyContent: 'center', width: '100%'}}>
+                {pagesArray.map(n => 
+                    <Button
+                        onClick={() => changePage(n)}
+                        key={n}
+                    >{n}</Button>    
+                )}
+            </ButtonGroup>
         </div>
     );
 }

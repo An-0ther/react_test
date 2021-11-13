@@ -1,10 +1,23 @@
-import React from 'react'
+import { Typography } from '@mui/material';
+import {Helmet} from "react-helmet";
+import React from 'react';
+import '../styles/App.css';
 
 function About() {
     return (
-        <h1>
-            Just a page for router
-        </h1>
+        <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>About page</title>
+            </Helmet>
+            <Typography variant="h1" color="initial">
+                Just a page for router
+            </Typography>
+            <Typography variant="h1" color="initial">
+                Just a page for router
+            </Typography>
+        </div>
+                
     )
 }
 
