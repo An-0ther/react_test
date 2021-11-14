@@ -15,7 +15,7 @@ function MyNavbar() {
               { t("test_app") }
             </Typography>
             <MenuItem component="button" color="inherit" underline="hover"><Link to="/about" className="link-rs">{ t("about") }</Link></MenuItem>
-            <MenuItem component="button" color="inherit" underline="hover"><Link to="/" className="link-rs">{ t("home") }</Link></MenuItem>
+            <MenuItem component="button" color="inherit" underline="hover"><Link to="/posts" className="link-rs">{ t("home") }</Link></MenuItem>
           </Toolbar>
         </AppBar>
     )

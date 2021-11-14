@@ -19,7 +19,7 @@ function App() {
             <MyNavbar/>
                 <Routes>
                     <Route path="/about" element={<About/>} />
-                    <Route path="/" element={<Posts/>} />
+                    <Route path="/posts" element={<Posts/>} />
                     <Route path="*" element={<Error/>} />
                 </Routes>
         </BrowserRouter>
