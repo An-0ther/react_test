@@ -9,6 +9,7 @@ import PostList from '../components/PostList';
 import Mybutton from '../components/UI/button/Mybutton';
 import { Button, ButtonGroup } from '@mui/material';
 import {Helmet} from "react-helmet";
+import { useTranslation } from 'react-i18next';
 
 function Posts() {
     const [posts,
@@ -47,12 +48,13 @@ function Posts() {
         setPosts(posts.filter(p => p.id !== post.id))
     }
 
+    const { t } = useTranslation()
     
     return (
         <div className="App">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Posts page / Home</title>
+                <title>{ t("home") }</title>
             </Helmet>
             <PostForm create={createPost} />
 
@@ -62,7 +64,7 @@ function Posts() {
             }
             {isPostsLoading
                 ? <h1>Loaddiiing</h1>
-                : <PostList remove={removePost} posts={sortedAndSearchedPosts} title="Post List"/>
+                : <PostList remove={removePost} posts={sortedAndSearchedPosts} title={t('test_app')}/>
             }
             <ButtonGroup variant="text" aria-label="outlined primary button group" sx={{textAlign: 'center', justifyContent: 'center', width: '100%'}}>
                 {pagesArray.map(n => 

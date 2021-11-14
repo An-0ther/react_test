@@ -9,8 +9,11 @@ import About from './pages/About';
 import Posts from './pages/Posts';
 import Error from './pages/Error';
 import MyNavbar from './components/UI/navbar/MyNavbar';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+    const { t } = useTranslation()
+    
     return(
         <BrowserRouter>
             <MyNavbar/>

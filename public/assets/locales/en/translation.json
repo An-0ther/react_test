@@ -1,0 +1,17 @@
+{ 
+    "test_app": "Test App",
+    "loading": "Loading",
+    "create_post": "Create Post",
+    "delete_post": "Delete",
+    "about": "About",
+    "home": "Home",
+    "sort_by": "Sort by",
+    "by_name": "By name",
+    "by_descr": "By description",
+    "about_content": "Just a page for router",
+    "error_content": "404 - this page doesn't exist",
+    "search": "Search",
+    "name_of_post": "Name of post",
+    "descr_of_post": "Description of post",
+    "no_posts": "No posts"
+}

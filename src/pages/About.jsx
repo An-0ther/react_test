@@ -2,19 +2,22 @@ import { Typography } from '@mui/material';
 import {Helmet} from "react-helmet";
 import React from 'react';
 import '../styles/App.css';
+import { useTranslation } from 'react-i18next';
 
 function About() {
+    const { t } = useTranslation()
+
     return (
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>About page</title>
+                <title>{ t("about") }</title>
             </Helmet>
             <Typography variant="h1" color="initial">
-                Just a page for router
+                { t("about_content") }
             </Typography>
             <Typography variant="h1" color="initial">
-                Just a page for router
+                { t("about_content") }
             </Typography>
         </div>
                 

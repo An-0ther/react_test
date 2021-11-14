@@ -1,13 +1,16 @@
 import { Typography } from '@mui/material'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import PostItem from './PostItem'
 
 export default function PostList({posts, title, remove}) {
+    const { t } = useTranslation()
+    
     if(!posts.length) {
         return (
-            <h1 style={{textAlign: 'center'}}>
-                No posts
-            </h1>
+            <Typography variant="h5"  sx={{textAlign: 'center', fontWeight: 'bold'}}>
+                { t("no_posts") }
+            </Typography>
         )
     }
 
