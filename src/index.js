@@ -19,7 +19,9 @@ i18n
       caches: ['cookie'],
     },
     backend: {
-      loadPath: '../assets/locales/{{lng}}/translation.json',
+      loadPath: './assets/locales/{{lng}}/translation.json',
+      allowMultiLoading: false,
+      crossDomain: false,
     },
     react: { 
       useSuspense: false
